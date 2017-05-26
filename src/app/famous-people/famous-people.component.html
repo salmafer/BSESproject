@@ -1,0 +1,39 @@
+<h2>List</h2>
+<md-card>
+  <md-input-container>
+    <input mdInput #famousName placeholder="Famous name">
+  </md-input-container>
+  <button md-raised-button (click)="add(famousName.value); famousName.value=''">Add</button>
+</md-card>
+<md-nav-list>
+  <a md-list-item *ngFor="let famous of famouses" (click)="onSelect(famous)">
+    <span md-line>{{ famous.name }}</span>
+    <button md-icon-button (click)="delete(famous)">
+      <md-icon>delete</md-icon>
+    </button>
+  </a>
+</md-nav-list>
+
+<!--<h1>{{title}}</h1>
+<h2> Famous list </h2>
+<div>
+  <label>Famous person name:</label> <input #famousName />
+  <button (click)="add(famousName.value); famousName.value=''">
+    Add
+  </button>
+</div>
+<ul class="famouses">
+  <li *ngFor="let famous of famouses"
+      [class.slected]="famous === selectefFamous"
+      (click)="onSelect(famous)">
+    <span class="badge">{{famous.id}}</span> {{famous.name}}
+    <button class="delete"
+       (click)="delete(famous); $event.stopPropagation()"> Del </button>
+  </li>
+</ul>
+<div *ngIf="selectedFamous">
+  <h2>
+    {{selectedFamous.name | uppercase}}
+  </h2>
+  <button (click)="ToDetail()">View Details</button>
+</div>-->

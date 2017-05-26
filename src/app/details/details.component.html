@@ -1,0 +1,12 @@
+<div *ngIf="famous">
+  <md-input-container>
+    <input mdInput placeholder="Id" [(ngModel)]="famous.id" disabled>
+  </md-input-container>
+  <md-input-container>
+    <input mdInput placeholder="Name" [(ngModel)]="famous.name">
+  </md-input-container>
+</div>
+<div>
+  <button md-raised-button color="primary" (click)="save()">Save</button>
+  <button md-raised-button (click)="goBack()">Back</button>
+</div>

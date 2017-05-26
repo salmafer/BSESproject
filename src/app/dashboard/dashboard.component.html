@@ -1,0 +1,5 @@
+<h3>Top Searched</h3>
+<md-card class="dashboard-card" *ngFor="let famous of famouses" [routerLink]="['/detail', famous.id]">
+  <h4>{{ famous.name }}</h4>
+</md-card>
+<app-famous-search></app-famous-search>
